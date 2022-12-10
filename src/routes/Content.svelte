@@ -1,12 +1,54 @@
 <script>
+    import { fly } from 'svelte/transition';
     import JournalImage from '$lib/images/Journal.jpg'
     import smallImg from '$lib/images/Journalresized.jpg'
+    let number = 0;
+
+        let text1i = "Its not just a"
+        let span1 = "Neurosurgical"
+        let text1f = "Organization"
+        let text2i = "This is an Organization for"
+        let span2 = "Youth."
+
+    function changeText1(){
+        number += 1
+        text1i = "Read the"
+        span1 = "Journal"
+        text1f = "by the IYNA"
+        text2i = "A Journal for"
+        span2 = "Young and Aspiring Neurosurgeons."
+        visible = true
+    }
+
+    function changeText2(){
+        number += 1
+        text1i = "Read the"
+        span1 = "Book"
+        text1f = "by the IYNA"
+        text2i = "The book that tries to make"
+        span2 = "Neurosurgery Easy!"
+    }
+
+    function changeText3(){
+        number += 1
+        text1i = "Discover our work on"
+        span1 = "AI"
+        text1f = "that helps you learn"
+        text2i = "Ai should help us become better. Not"
+        span2 = "Replace us!"
+    }
+    
 </script>
+
+
 
 <div class="content">
     <div class="textBox">
-        <h2>Its not just a <span class="ttext">Neurosurgical</span> Organization.<br> Its an Organization for the <span class="ttext">Youth</span>.</h2>
-        <p>This is some description about my organization. I would make this better. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore distinctio ratione enim commodi quam suscipit mollitia eligendi quaerat. Ad earum, quam cum quibusdam quidem libero provident fugiat ut nemo illo.</p>
+        {#key number}
+        <h2 class="header">{text1i} <span>{span1}</span> {text1f}.<br>{text2i} <span>{span2}</span></h2>
+        {/key}
+
+        <p>This is some description about my organization. I would make this better. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </div>
     <div class="imageBox">
         <img src="{JournalImage}" alt="Journal">
@@ -14,9 +56,9 @@
 </div>
 
 <ul class="thumb">
-    <li><img src="{smallImg}" alt="Journal"></li>
-    <li><img src="{smallImg}" alt="Book"></li>
-    <li><img src="{smallImg}" alt="AI"></li>
+    <li><img src="{smallImg}" alt="Journal" on:click={changeText1}></li>
+    <li><img src="{smallImg}" alt="Book" on:click={changeText2}></li>
+    <li><img src="{smallImg}" alt="AI" on:click={changeText3}></li>
 </ul>
 
 <style>
@@ -39,6 +81,7 @@
     
     .content .textBox {
         position: relative;
+        min-height: 50vh;
         max-width: 1000px;
         margin-left: 20px;
         padding: 80px;
@@ -54,6 +97,15 @@
     .content .textBox h2 {
         font-size: 2.5em;
         line-height: 1.4em;
+        animation: fadein 2s;
+    }
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
     }
 
     .content .textBox h2 span {

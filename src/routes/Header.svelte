@@ -39,19 +39,20 @@
         max-width: 100px;
     }
 
-    header ul {
+    /* header ul {
         position: relative;
         display: flex;
-    }
-    header ul li {
-        list-style: none;
-    }
+    } */
 
-    header ul li a {
+    /* header ul li {
+        list-style: none;
+    } */
+
+    /* header ul li a {
         display: inline-block;
         color: #000;
         font-weight: 400;
         margin-left: 40px;
         text-decoration: none;
-    }
+    } */
 </style>
