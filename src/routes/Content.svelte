@@ -31,11 +31,11 @@
 
     function changeText3(){
         number += 1
-        text1i = "Discover our work on"
-        span1 = "AI"
-        text1f = "that helps you learn"
-        text2i = "Ai should help us become better. Not"
-        span2 = "Replace us!"
+        text1i = "Our work on"
+        span1 = "Neurosurgical AI"
+        text1f = "helping you learn"
+        text2i = "Ai can help us become"
+        span2 = "the Best!"
     }
     
 </script>
@@ -46,9 +46,10 @@
     <div class="textBox">
         {#key number}
         <h2 class="header">{text1i} <span>{span1}</span> {text1f}.<br>{text2i} <span>{span2}</span></h2>
+        <p>This is some description about my organization. I would make this better. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         {/key}
 
-        <p>This is some description about my organization. I would make this better. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        
     </div>
     <div class="imageBox">
         <img src="{JournalImage}" alt="Journal">
@@ -84,7 +85,7 @@
         min-height: 50vh;
         max-width: 1000px;
         margin-left: 20px;
-        padding: 80px;
+        padding: 40px;
         /* blur */
         background: rgba(255, 255, 255, 0.2);
         border-radius: 16px;
@@ -120,6 +121,7 @@
     .content .textBox p {
         font-size: 20px;
         margin-top: 20px;
+        animation: fadein 2s;
     }
 
     .content .imageBox {
