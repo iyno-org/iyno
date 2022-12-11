@@ -5,7 +5,7 @@
 <header>
     <a href="/" class="logo"><img src="{logo}" alt="logo">
     <div class="name">
-        <h2>IYNO</h2>
+        <h2 class="IYNO TEXT">IYNO</h2>
     </div>
     </a>
     <!-- <ul>
@@ -47,11 +47,17 @@
         position: relative;
         margin-left: 0%;
         max-width: 100px;
-        padding-right: 20px;
     }
 
     .name {
-        margin-left: 40px;
+        margin-left: 35px;
+
+        font-size: 1.1em;
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, #eb8e59, #af4261);
+        background-clip: text;
+        background-size: 100%;
+        -webkit-text-fill-color: transparent;
     }
 
     /* header ul {
