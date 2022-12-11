@@ -3,7 +3,11 @@
 </script>
 
 <header>
-    <a href="/" class="logo"><img src="{logo}" alt="logo"></a>
+    <a href="/" class="logo"><img src="{logo}" alt="logo">
+    <div class="name">
+        <h2>IYNO</h2>
+    </div>
+    </a>
     <!-- <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/journal">Journal</a></li>
@@ -28,15 +32,26 @@
         width: 100%;
         padding: 20px 100px;
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
         align-items: center;
         font-family: 'Poppins', sans-serif;
     }
 
+    header a {
+        text-decoration: none;
+        color: black;
+    }
+
     header .logo {
         position: relative;
-        margin-left: 50%;
+        margin-left: 0%;
         max-width: 100px;
+        padding-right: 20px;
+    }
+
+    .name {
+        margin-left: 40px;
     }
 
     /* header ul {
